@@ -5,7 +5,7 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:b="http://bootsfaces.net/ui"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+>
 
 <h:head>
     <title>BootsFaces: the next-gen JSF Framework based on Bootstrap</title>
@@ -18,7 +18,7 @@
     <meta name="DISTRIBUTION" content="GLOBAL" />
     <meta http-equiv="PRAGMA" content="NO-CACHE" />
 
-    <h:outputStylesheet library="sh" name="css/shCore.css"/>
+    <h:outputStylesheet name="css/styles.css"/>
     <!-- These CSS don't do anything. The just demonstrate the position attribute.>
     <h:outputStylesheet name="last.css" position="last"/>
     <h:outputStylesheet name="first.css" position="first"/>
@@ -33,7 +33,7 @@
             <ui:include src="/applayout/navbartop.xhtml"/>
         </ui:insert>
 
-        <b:container>
+    <b:container id="main-container">
             <ui:insert name="content"/>
         </b:container>
 

@@ -12,6 +12,7 @@ import java.util.Collection;
  */
 @Entity
 @Table(name = "brand")
+@NamedQueries(@NamedQuery(name = "BrandJPA.listAll", query = "SELECT brand FROM BrandJPA brand"))
 public class BrandJPA implements Serializable {
 
     private static final long serialVersionUID = 121499957027713813L;

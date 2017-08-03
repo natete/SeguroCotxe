@@ -5,12 +5,25 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:b="http://bootsfaces.net/ui"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+>
 <ui:composition template="applayout/pageTemplate.xhtml">
 
     <ui:define name="content">
 
-        <b:jumbotron>Hello World!</b:jumbotron>
+        <h:form>
+            <b:dataTable value="#{listBrands.brands}" var="car">
+                <b:dataTableColumn value="#{car.name}" order="asc"/>
+            </b:dataTable>
+        </h:form>
+
+        <h:form>
+            <b:label text="Nombre de marca" id="label"/>
+            <b:inputText placeholder="Nueva marca..." value="#{listBrands.brandName}"/>
+
+            <b:commandButton value="Crear Marca" action="#{listBrands.createBrand(listBrands.brandName)}"/>
+
+        </h:form>
+
 
     </ui:define>
 </ui:composition>
