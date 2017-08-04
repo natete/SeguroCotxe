@@ -38,12 +38,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <!--<dependency>-->
-        <!--<groupId>org.postgresql</groupId>-->
-        <!--<artifactId>postgresql</artifactId>-->
-        <!--<version>${postgresql.version}</version>-->
-        <!--</dependency>-->
-
         <dependency>
             <groupId>javax.ejb</groupId>
             <artifactId>ejb-api</artifactId>
@@ -59,12 +53,6 @@
             <scope>provided</scope>
         </dependency>
 
-        <dependency>
-            <groupId>mysql</groupId>
-            <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql-connector-java.version}</version>
-        </dependency>
-
     </dependencies>
 
     <build>
@@ -77,64 +65,6 @@
                     <target>1.8</target>
                 </configuration>
             </plugin>
-
-            <!--<plugin>-->
-            <!--<groupId>org.wildfly.plugins</groupId>-->
-            <!--<artifactId>wildfly-maven-plugin</artifactId>-->
-            <!--<version>1.2.0.Alpha6</version>-->
-            <!--<executions>-->
-            <!--&lt;!&ndash; Undeploy the application on clean &ndash;&gt;-->
-
-            <!--&lt;!&ndash; Deploy the JDBC library &ndash;&gt;-->
-            <!--<execution>-->
-            <!--<id>deploy-driver</id>-->
-            <!--<phase>install</phase>-->
-            <!--<configuration>-->
-            <!--<groupId>mysql</groupId>-->
-            <!--<artifactId>mysql-connector-java</artifactId>-->
-            <!--<name>mysql-connector-java-${mysql-connector-java.version}</name>-->
-            <!--</configuration>-->
-            <!--<goals>-->
-            <!--<goal>deploy-artifact</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-
-            <!--&lt;!&ndash; Add a data source &ndash;&gt;-->
-            <!--<execution>-->
-            <!--<id>add-datasource</id>-->
-            <!--<phase>package</phase>-->
-            <!--<configuration>-->
-            <!--<address>subsystem=datasources,data-source=mysql</address>-->
-            <!--<resources>-->
-            <!--<resource>-->
-            <!--<properties>-->
-            <!--<connection-url>jdbc:mysql://localhost/segurocotxe</connection-url>-->
-            <!--<jndi-name>java:jboss/mysql</jndi-name>-->
-            <!--<enabled>true</enabled>-->
-            <!--<enable>true</enable>-->
-            <!--<user-name>root</user-name>-->
-            <!--<password>admin</password>-->
-            <!--<driver-name>mysql-connector-java-${mysql-connector-java.version}_com.mysql.jdbc.Driver_5_1</driver-name>-->
-            <!--<use-ccm>false</use-ccm>-->
-            <!--</properties>-->
-            <!--</resource>-->
-            <!--</resources>-->
-            <!--</configuration>-->
-            <!--<goals>-->
-            <!--<goal>add-resource</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-
-            <!--&lt;!&ndash; Deploy the application on install &ndash;&gt;-->
-            <!--<execution>-->
-            <!--<id>deploy</id>-->
-            <!--<phase>install</phase>-->
-            <!--<goals>-->
-            <!--<goal>deploy</goal>-->
-            <!--</goals>-->
-            <!--</execution>-->
-            <!--</executions>-->
-            <!--</plugin>-->
         </plugins>
     </build>
 </project>
